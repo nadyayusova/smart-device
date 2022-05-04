@@ -1,6 +1,7 @@
 .page-title {
-  height: 880px;
-  padding-top: 120px;
+  min-height: 880px;
+
+  background-color: $color-tangaroa;
   background-image: url("../img/title-bg-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -9,10 +10,58 @@
   @include retina {
     background-image: url("../img/title-bg-desktop@2x.jpg");
   }
+
+  @include vp-1023 {
+    min-height: 640px;
+    background-image: url("../img/title-bg-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/title-bg-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-769 {
+    min-height: 560px;
+    background-image: url("../img/title-bg-mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/title-bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.page-title__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 306px;
+  padding-bottom: 50px;
+  padding-left: 125px;
+
+  @include vp-1023 {
+    padding-top: 180px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+  }
+
+  @include vp-769 {
+    align-items: stretch;
+    padding-top: 151px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include vp-319 {
+    padding-top: 150px;
+  }
 }
 
 .page-title__caption {
+  max-width: 800px;
   margin: 0;
+  margin-bottom: 31px;
 
   font-family: $ff-roboto;
   font-weight: 700;
@@ -22,18 +71,77 @@
   text-transform: uppercase;
 
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    max-width: 90%;
+    margin-bottom: 1px;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @include vp-769 {
+    max-width: 100%;
+    margin-bottom: 7px;
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .page-title__description {
+  max-width: 650px;
+  margin: 0;
+  margin-bottom: 36px;
+
   font-family: $ff-ptmono;
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
 
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    max-width: 90%;
+    margin-bottom: 46px;
+    font-size: 22px;
+    line-height: 155%;
+  }
+
+  @include vp-769 {
+    max-width: 100%;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 155%;
+  }
 }
 
 .page-title__get-advice-link {
   font-size: 18px;
   line-height: 21px;
+  padding: 15px 26px;
+
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-769 {
+    margin-left: 0;
+    padding: 11px 20px;
+    font-size: 14px;
+    line-height: 16px;
+    justify-content: center;
+  }
+}
+
+.page-title__mobile {
+  display: none;
+
+  @include vp-769 {
+    display: inline;
+  }
+}
+
+.page-title__desktop {
+  @include vp-769 {
+    display: none;
+  }
 }
