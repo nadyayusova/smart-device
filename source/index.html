@@ -5,18 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
+    <link rel="preload" href="./fonts/ptmono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/robotocondensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container">header</div>
+      <header class="page-header">
+        <nav class="main-nav container">
+          <a class="logo" aria-label="Главная страница Smart Device">
+            <svg class="logo__image" width="55" height="55" viewBox="0 0 55 55" role="img" focusable="false">
+              <use xlink:href="./img/sprite_auto.svg#logo"></use>
+            </svg>
+            <svg class="logo__text" width="145" height="45" viewBox="0 0 145 45" role="img" focusable="false">
+              <use xlink:href="./img/sprite_auto.svg#logo-text"></use>
+            </svg>
+            <span class="visually-hidden">На главную</span>
+          </a>
+          <div class="main-nav__contacts">
+            <div class="email">
+              <a class="email__link" href="mailto:info@sd.ru">
+                <svg class="email__icon" width="21" height="20" viewBox="0 0 21 20" role="img" aria-label="Значок конверта" focusable="false">
+                  <use xlink:href="./img/sprite_auto.svg#email"></use>
+                </svg>
+              <span class="email__text">info@sd.ru</span></a>
+            </div>
+            <div class="tel">
+              <a class="tel__link" href="tel:+74950005252">
+                <svg class="tel__icon" width="21" height="20" viewBox="0 0 21 20" role="img" aria-label="Значок телефона" focusable="false">
+                  <use xlink:href="./img/sprite_auto.svg#phone"></use>
+                </svg>
+                <span class="tel__text">+7 (495) 000 52 52</span></a>
+            </div>
+          </div>
+          <a class="main-nav__order-call-link btn btn--transparent-1" href="#">Заказать звонок</a>
+        </nav>
       </header>
-      <main>
+
+      <!-- <main class="page-main">
+        <h1 class="visually-hidden">Сайт компании Smart Device по производству, монтажу и поставке печатных плат</h1>
+
+        <section class="page-title">
+          <div class="container">
+            <h2 class="page-title__caption">Печатные платы</h2>
+            <p class="page-title__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a class="page-title__get-advice-link btn btn--solid-1" href="#">Получить бесплатную консультацию</a>
+          </div>
+        </section>
+
         <section class="intro">
           <div class="container">
-            <h1>Тестовая страница.</h1>
+            <h2>Тестовая страница.</h2>
             <p>На данной странице показан пример модальных окон.</p>
             <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
@@ -24,9 +64,10 @@
           </div>
         </section>
       </main>
-      <footer>
+
+      <footer class="page-footer">
         <div class="container">footer</div>
-      </footer>
+      </footer> -->
     </div>
 
     <!-- Модалки -->

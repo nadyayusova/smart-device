@@ -24,8 +24,14 @@
 //   }
 // }
 
-// @mixin vp-1023 {
-//   @media (max-width: $vp-1024 - 1) {
+@mixin vp-1023 {
+  @media (max-width: $vp-1024 - 1) {
+    @content;
+  }
+}
+
+// @mixin vp-770 {
+//   @media (max-width: $vp-770 + 1) {
 //     @content;
 //   }
 // }
@@ -44,6 +50,12 @@
 
 // @mixin vp-374 {
 //   @media (max-width: $vp-375 - 1) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-320 {
+//   @media (max-width: $vp-320 + 1) {
 //     @content;
 //   }
 // }

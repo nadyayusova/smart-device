@@ -1,0 +1,39 @@
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 12px;
+
+  @include vp-1023 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include vp-769 {
+    margin-top: -3px;
+  }
+}
+
+.logo__image {
+  display: block;
+  margin-right: 15px;
+
+  @include vp-1023 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include vp-769 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.logo__text {
+  display: block;
+  margin-top: 4px;
+
+  @include vp-769 {
+    display: none;
+  }
+}

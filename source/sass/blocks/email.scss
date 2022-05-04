@@ -1,0 +1,31 @@
+.email {
+  flex-shrink: 0;
+  padding-bottom: 11px;
+
+  @include vp-1023 {
+    padding-bottom: 0;
+  }
+}
+
+.email__link {
+  display: flex;
+  align-items: center;
+}
+
+.email__icon {
+  display: block;
+  margin-right: 15px;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+}
+
+.email__text {
+  font-size: 16px;
+  line-height: 18px;
+
+  @include vp-1023 {
+    display: none;
+  }
+}

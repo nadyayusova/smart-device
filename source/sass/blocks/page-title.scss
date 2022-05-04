@@ -1,0 +1,39 @@
+.page-title {
+  height: 880px;
+  padding-top: 120px;
+  background-image: url("../img/title-bg-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/title-bg-desktop@2x.jpg");
+  }
+}
+
+.page-title__caption {
+  margin: 0;
+
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 118%;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: $color-alice-blue;
+}
+
+.page-title__description {
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 155%;
+
+  color: $color-alice-blue;
+}
+
+.page-title__get-advice-link {
+  font-size: 18px;
+  line-height: 21px;
+}
