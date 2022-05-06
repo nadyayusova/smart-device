@@ -1,0 +1,32 @@
+.advantages {
+  background-color: $color-alice-blue-lighter;
+}
+
+.advantages__inner {
+  max-width: 1300px;
+  padding: 120px 40px 20px;
+
+  @include vp-1023 {
+    padding: 80px 50px 20px;
+  }
+
+  @include vp-769 {
+    padding: 50px 25px 20px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 33px;
+
+  margin: 0;
+
+  @include vp-1023 {
+    gap: 30px 27px;
+  }
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+  }
+}
