@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {makeTextVisible} from './modules/page-title';
+import {initButton} from './modules/about';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   makeTextVisible();
+  initButton();
 
   window.addEventListener('load', () => {
     initModals();

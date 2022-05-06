@@ -1,0 +1,106 @@
+.about {
+  background-color: $color-alice-blue-lighter;
+}
+
+.about__inner {
+  position: relative;
+  max-width: 1300px;
+
+  padding: 100px 40px 40px 290px;
+  background-image: url("../img/digits-bg.jpg");
+  background-position: 73px 109px;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  @include vp-1023 {
+    padding: 55px 50px 40px 225px;
+    background-position: 77px 70px;
+  }
+
+  @include vp-769 {
+    padding: 28px 25px 20px;
+    background-image: none;
+  }
+
+  &::after {
+    content: attr(data-year);
+    position: absolute;
+    left: -46px;
+    top: 154px;
+    width: 354px;
+    height: 215px;
+
+    font-family: $ff-roboto;
+    font-weight: 700;
+    font-size: 156px;
+    line-height: 220px;
+    text-align: center;
+
+    mix-blend-mode: lighten;
+    color: $color-default-black;
+    background-color: $color-alice-blue-lighter;
+
+    transform: rotate(-90deg);
+
+    @include vp-1023 {
+      left: -61px;
+      top: 133px;
+      height: 176px;
+    }
+
+    @include vp-769 {
+      display: none;
+    }
+  }
+}
+
+.about__caption {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-black-pearl-2;
+
+  @include vp-769 {
+    font-size: 28px;
+    line-height: 140%;
+  }
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-black-pearl-2;
+
+  @include vp-769 {
+    font-size: 14px;
+    line-height: 134.4%;
+  }
+}
+
+.about__mobile-invisible {
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.about__show-more {
+  margin-top: 20px;
+  padding: 14px 50px;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-1023 {
+    margin-top: -6px;
+  }
+
+  @include vp-769 {
+    padding: 10px 20px;
+  }
+}
