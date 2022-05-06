@@ -1,0 +1,94 @@
+.page-footer {
+  background-color: $color-black-pearl;
+}
+
+.page-footer__inner {
+  display: grid;
+  grid-template-columns: 324px 1fr 345px;
+  grid-template-rows: 55px max-content;
+  column-gap: 50px;
+  grid-template-areas:
+    "logo    sections office"
+    "socials sections office";
+  align-items: start;
+
+  padding: 52px 0 20px;
+
+  @include vp-1023 {
+    grid-template-columns: 37% 47.5%;
+    column-gap: 15.5%;
+    grid-template-areas:
+      "logo     socials"
+      "sections office";
+
+    padding: 50px 50px 20px 50px;
+  }
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "socials"
+      "sections"
+      "office";
+    padding: 39px 0 35px;
+  }
+}
+
+.page-footer__logo {
+  grid-area: logo;
+}
+
+.page-footer__socials {
+  grid-area: socials;
+
+  @include vp-769 {
+    align-self: center;
+  }
+}
+
+.page-footer__site-sections {
+  grid-area: sections;
+}
+
+.page-footer__office {
+  grid-area: office;
+}
+
+.page-footer__caption {
+  margin: 6px 0 20px;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin: 37px 0 21px;
+  }
+
+  @include vp-769 {
+    margin: 0;
+    padding: 23px 25px 20px;
+    cursor: pointer;
+  }
+}
+
+.page-footer__text {
+  display: block;
+  font-family: $ff-ptmono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: $color-transparent-white;
+
+  @include vp-769 {
+    margin-left: 25px;
+    margin-right: 25px;
+    // margin-top: -3px;
+    font-size: 14px;
+  }
+}

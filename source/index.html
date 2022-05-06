@@ -65,12 +65,92 @@
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
-        </section>
+        </section> -->
+
+        <!-- Около каждого изображения в HTML должен быть комментарий с её размером для ретины и без ретины -->
+        <!-- 1х: 1200px; 2x: 2400px -->
+        <!-- img -->
       </main>
 
       <footer class="page-footer">
-        <div class="container">footer</div>
-      </footer> -->
+        <div class="page-footer__inner container">
+          <a class="page-footer__logo logo logo--footer" aria-label="Главная страница Smart Device">
+            <svg class="logo__image" width="55" height="55" viewBox="0 0 55 55" role="img" focusable="false">
+              <use xlink:href="./img/sprite_auto.svg#logo"></use>
+            </svg>
+            <svg class="logo__text" width="145" height="45" viewBox="0 0 145 45" role="img" focusable="false">
+              <use xlink:href="./img/sprite_auto.svg#logo-text"></use>
+            </svg>
+            <span class="visually-hidden">На главную</span>
+          </a>
+
+          <ul class="page-footer__socials socials">
+            <li class="socials__item">
+              <a class="socials__link" href="https://facebook.com" target="_blank">
+                <svg width="30" height="30" viewBox="0 0 30 30" role="img" aria-label="Ссылка на Фэйсбук" focusable="false">
+                  <use xlink:href="./img/sprite_auto.svg#fb"></use>
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="https://ok.com" target="_blank">
+                <svg width="30" height="30" viewBox="0 0 30 30" role="img" aria-label="Ссылка на Одноклассники" focusable="false">
+                  <use xlink:href="./img/sprite_auto.svg#ok"></use>
+                </svg>
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="https://vk.com" target="_blank">
+                <svg width="30" height="30" viewBox="0 0 30 30" role="img" aria-label="Ссылка на Вконтакте" focusable="false">
+                  <use xlink:href="./img/sprite_auto.svg#vk"></use>
+                </svg>
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="page-footer__site-sections site-sections">
+            <h2 class="page-footer__caption site-sections__caption">Разделы сайта</h2>
+            <ul class="site-sections__list">
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">О Компаниии</a>
+              </li>
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">Продукты</a>
+              </li>
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">Протзводство печатных плат</a>
+              </li>
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">Комплектующие</a>
+              </li>
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">Доставка</a>
+              </li>
+              <li class="site-sections__item">
+                <a class="page-footer__text site-sections__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="page-footer__office office accordion">
+            <h2 class="page-footer__caption office__caption accordion__header">Наш офис</h2>
+            <div class="accordion__content">
+              <address class="page-footer__text office__address">г. Мытищи, Олимпийский проспект, д.10</address>
+              <a class="page-footer__text office__phone-number" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a class="page-footer__text office__phone-number" href="tel:+79253895829">+7 (925) 389-58-29</a>
+              <a class="page-footer__text office__phone-number" href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!-- Модалки -->

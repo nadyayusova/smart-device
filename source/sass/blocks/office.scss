@@ -1,0 +1,20 @@
+.office {
+  @include vp-769 {
+    border-bottom: $accordion-border;
+  }
+}
+
+.office__caption {
+  @include vp-769 {
+    border-top: $accordion-border;
+  }
+}
+
+.office__address {
+  line-height: 148%;
+  margin-bottom: 6px;
+}
+
+.office__phone-number:not(:last-child) {
+  margin-bottom: 6px;
+}

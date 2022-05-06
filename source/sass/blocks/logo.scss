@@ -12,6 +12,24 @@
   @include vp-769 {
     margin-top: -3px;
   }
+
+  &--footer {
+    padding: 0;
+
+    @include vp-769 {
+      justify-content: center;
+      margin-left: -4px;
+    }
+
+    .logo__image {
+      width: 55px;
+      height: 55px;
+    }
+
+    .logo__text {
+      display: block;
+    }
+  }
 }
 
 .logo__image {

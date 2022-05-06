@@ -1,6 +1,7 @@
 .email {
   flex-shrink: 0;
   padding-bottom: 11px;
+  user-select: none;
 
   @include vp-1023 {
     padding-bottom: 0;
@@ -9,7 +10,18 @@
 
 .email__link {
   display: flex;
+  justify-content: center;
   align-items: center;
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: $hover-opacity;
+  }
+
+  &:focus,
+  &:active {
+    opacity: $active-opacity;
+  }
 }
 
 .email__icon {
