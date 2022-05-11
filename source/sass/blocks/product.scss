@@ -1,0 +1,161 @@
+.product {
+  position: relative;
+  flex-basis: calc((100% - 2 * 6.9%) / 3);
+  // flex-basis: 350px;
+  min-height: 650px;
+  margin-bottom: 20px;
+  background-color: $color-tangaroa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1023 {
+    min-height: 250px;
+    margin-bottom: 0;
+  }
+
+  &:nth-child(3n+1) {
+    background-image: url("../img/card-1-bg-desktop.jpg");
+
+    @include retina {
+      @media (min-width: $vp-desktop-only) {
+        background-image: url("../img/card-1-bg-desktop@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/card-1-bg-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/card-1-bg-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-769 {
+      background-image: url("../img/card-1-bg-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/card-1-bg-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &:nth-child(3n+2) {
+    background-image: url("../img/card-2-bg-desktop.jpg");
+
+    @include retina {
+      @media (min-width: $vp-desktop-only) {
+        background-image: url("../img/card-2-bg-desktop@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/card-2-bg-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/card-2-bg-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-769 {
+      background-image: url("../img/card-2-bg-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/card-2-bg-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &:nth-child(3n+3) {
+    background-image: url("../img/card-3-bg-desktop.jpg");
+
+    @include retina {
+      @media (min-width: $vp-desktop-only) {
+        background-image: url("../img/card-3-bg-desktop@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/card-3-bg-tablet.jpg");
+
+      @include retina {
+        background-image: url("../img/card-3-bg-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-769 {
+      background-image: url("../img/card-3-bg-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/card-3-bg-mobile@2x.jpg");
+      }
+    }
+  }
+}
+
+.product__link {
+  display: block;
+  height: 100%;
+
+  &:hover,
+  &:focus-within {
+    .product__arrow {
+      background-color: $color-alice-blue;
+    }
+
+    .product__image {
+      stroke: $color-deep-sky-blue;
+    }
+  }
+}
+
+.product__name {
+  max-width: 240px;
+  padding: 46px 40px 20px;
+  margin: 0;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: $color-default-white;
+
+  @include vp-1023 {
+    padding: 38px 45px 20px;
+  }
+
+  @include vp-769 {
+    max-width: 190px;
+    padding: 27px 30px 20px;
+    font-size: 18px;
+  }
+}
+
+.product__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: $color-deep-sky-blue;
+  border-radius: 3px 0 0 0;
+
+  // @include vp-1023 {
+  //   width: 60px;
+  //   height: 60px;
+  // }
+
+  @include vp-769 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.product__image {
+  fill: none;
+  stroke: $color-default-white;
+  stroke-linejoin: round;
+}

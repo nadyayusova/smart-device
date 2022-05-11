@@ -8,7 +8,9 @@
   background-size: cover;
 
   @include retina {
-    background-image: url("../img/title-bg-desktop@2x.jpg");
+    @media (min-width: $vp-desktop-only) {
+      background-image: url("../img/title-bg-desktop@2x.jpg");
+    }
   }
 
   @include vp-1023 {

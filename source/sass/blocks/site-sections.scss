@@ -1,16 +1,4 @@
-// .site-sections {
-//   // display: grid;
-//   // grid-template-columns: 51% 49%;
-//   // column-gap: 20px;
-
-//   @include vp-1023 {
-//     grid-template-columns: 1fr;
-//   }
-// }
-
 .site-sections__caption {
-  // grid-column: 1 / -1;
-
   @include vp-769 {
     border-top: $accordion-border;
   }
@@ -26,13 +14,11 @@
   padding: 0;
   list-style-type: none;
 
-  &:not(:last-child) {
-    @include vp-1023 {
-      margin-bottom: 7px;
-    }
+  @include vp-1023 {
+    grid-template-columns: 1fr;
   }
 }
 
 .site-sections__item:not(:last-child) {
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }

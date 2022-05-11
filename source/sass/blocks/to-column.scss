@@ -1,0 +1,17 @@
+.to-column {
+  &--1 {
+    grid-column: 1;
+
+    @include vp-1023 {
+      grid-column: unset;
+    }
+  }
+
+  &--2 {
+    grid-column: 2;
+
+    @include vp-1023 {
+      grid-column: unset;
+    }
+  }
+}

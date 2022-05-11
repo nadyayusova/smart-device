@@ -10,11 +10,28 @@
   }
 }
 
-.office__address {
-  line-height: 148%;
+.office__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-769 {
+    margin-bottom: -7px;
+  }
+}
+
+.office__item {
   margin-bottom: 6px;
 }
 
-.office__phone-number:not(:last-child) {
-  margin-bottom: 6px;
+.office__address {
+  line-height: 148%;
+
+  @include vp-769 {
+    padding-bottom: 8px;
+  }
 }
+
+// .office__phone-number:not(:last-child) {
+//   margin-bottom: 6px;
+// }

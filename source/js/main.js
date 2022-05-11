@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {makeTextVisible} from './modules/page-title';
 import {initButton} from './modules/about';
+import {initAccordion} from './modules/accordion';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   makeTextVisible();
   initButton();
+  initAccordion();
 
   window.addEventListener('load', () => {
     initModals();

@@ -10,7 +10,13 @@
   background-image: url("../img/digits-bg.jpg");
   background-position: 73px 109px;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 115px 305px;
+
+  @include retina {
+    @media (min-width: $vp-not-mobile) {
+      background-image: url("../img/digits-bg@2x.jpg");
+    }
+  }
 
   @include vp-1023 {
     padding: 55px 50px 40px 225px;

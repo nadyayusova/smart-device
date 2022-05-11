@@ -13,6 +13,8 @@
   color: $color-alice-blue;
   background: $dark-to-top;
 
+  z-index: 10;
+
   @include vp-1023 {
     position: absolute;
   }
