@@ -50,9 +50,9 @@
           <div class="page-title__inner container">
             <h2 class="page-title__caption">Печатные платы</h2>
             <p class="page-title__description">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <a class="page-title__get-advice-link btn btn--solid-1" href="#">
-              <span class="page-title__desktop" data-btn-visible="desktop">Получить бесплатную консультацию</span>
-              <span class="page-title__mobile visually-hidden" data-btn-visible="mobile">Бесплатная консультация</span>
+            <a class="page-title__get-advice-link btn btn--solid-1" href="#consultation">
+              <span class="page-title__btn-text page-title__btn-text--desktop">Получить бесплатную консультацию</span>
+              <span class="page-title__btn-text page-title__btn-text--mobile">Бесплатная консультация</span>
             </a>
           </div>
         </section>
@@ -105,16 +105,14 @@
           <div class="about__inner container" data-year="2022">
             <h2 class="about__caption">О&nbsp;компании</h2>
             <p class="about__text">Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
-            <p class="about__text">Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span class="about__mobile-invisible"> Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-            <p class="about__text about__more-text visually-hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
-            <p class="about__text about__more-text visually-hidden">Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
-            <button class="about__show-more btn btn--transparent-2" type="button" name="show-more">Подробнее</button>
+            <p class="about__text">Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span class="about__mobile-invisible about__mobile-invisible--opened"> Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            <p class="about__text about__text--opened">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
+            <p class="about__text about__text--opened ">Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+            <button class="about__show-more about__show-more--hidden btn btn--transparent-2" type="button" name="show-more">Свернуть</button>
           </div>
         </section>
 
-        <!-- это готово, открыть -->
-
-        <!-- <section class="products">
+        <section class="products">
           <div class="products__inner container">
             <h2 class="visually-hidden">Товары и услуги</h2>
             <p class="products__offer products__offer--desktop">Smart Device предлагает следующие товары и&nbsp;услуги</p>
@@ -152,7 +150,38 @@
               </li>
             </ul>
           </div>
-        </section> -->
+        </section>
+
+        <section class="feedback-form" id="consultation">
+          <div class="feedback-form__inner container">
+            <h2 class="visually-hidden">Форма обратной связи</h2>
+            <p class="feedback-form__offer">Остались вопросы? Задайте их нам!</p>
+            <p class="feedback-form__service">Мы проконсультируем Вас бесплатно</p>
+            <form class="feedback-form__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+              <ul class="form__content">
+                <li class="form__name field">
+                  <label class="visually-hidden" for="user-name">Имя</label>
+                  <input class="field__text-input field__text-input--name" type="text" id="user-name" name="user-name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" minlength="1" maxlength="60" placeholder="Имя" required>
+                </li>
+                <li class="form__tel field">
+                  <label class="visually-hidden" for="phone-no">Tелефон</label>
+                  <input class="field__text-input field__text-input--tel" type="tel" id="phone-no" name="phone-no" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{7}" placeholder="Телефон" required>
+                </li>
+                <li class="form__question field">
+                  <label class="visually-hidden" for="question">Текст вопроса</label>
+                  <textarea class="field__text-input field__text-input--big" id="question" name="question" rows="5" placeholder="Ваш вопрос"></textarea>
+                </li>
+                <li class="form__button field">
+                  <button class="field__submit btn btn--solid-2" type="submit" name="send-button">Задать вопрос</button>
+                </li>
+                <li class="form__agreement field">
+                  <input class="visually-hidden field__checkbox" type="checkbox" id="agreement" name="agreement" checked>
+                  <label class="field__label field__label--checkbox" for="agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </section>
 
         <!-- <section class="intro">
           <div class="container">
@@ -163,10 +192,6 @@
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
         </section> -->
-
-        <!-- Около каждого изображения в HTML должен быть комментарий с её размером для ретины и без ретины -->
-        <!-- 1х: 1200px; 2x: 2400px -->
-        <!-- img -->
       </main>
 
       <footer class="page-footer">
@@ -209,7 +234,7 @@
           <div class="page-footer__site-sections site-sections accordion accordion--opened">
             <button class="page-footer__caption site-sections__caption accordion__header" disabled>
               Разделы сайта
-              <span class="accordion__icon"></span>
+              <span class="accordion__icon accordion__icon--no-js"></span>
             </button>
             <ul class="site-sections__list accordion__content">
               <li class="site-sections__item to-column to-column--1">
@@ -238,7 +263,7 @@
           <div class="page-footer__office office accordion accordion--opened">
             <button class="page-footer__caption office__caption accordion__header" disabled>
               Наш офис
-              <span class="accordion__icon"></span>
+              <span class="accordion__icon accordion__icon--no-js"></span>
             </button>
             <ul class="office__list accordion__content">
               <li class="office__item"><address class="page-footer__text office__address">г. Мытищи, Олимпийский проспект, д.10</address></li>
@@ -252,21 +277,45 @@
     </div>
 
     <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          <p class="modal__title">Закажите звонок</p>
+          <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <button class="modal__close-btn btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use xlink:href="img/sprite_auto.svg#close"></use>
             </svg>
           </button>
+          <form class="modal__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+            <ul class="form__content">
+              <li class="form__name field">
+                <label class="visually-hidden" for="user-name-m">Имя</label>
+                <input class="field__text-input field__text-input--name" type="text" id="user-name-m" name="user-name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" minlength="1" maxlength="60" placeholder="Имя" autofocus required>
+              </li>
+              <li class="form__tel field">
+                <label class="visually-hidden" for="phone-no-m">Tелефон</label>
+                <input class="field__text-input field__text-input--tel" type="tel" id="phone-no-m" name="phone-no" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{7}" placeholder="Телефон" required>
+              </li>
+              <li class="form__question field">
+                <label class="visually-hidden" for="question-m">Текст вопроса</label>
+                <textarea class="field__text-input field__text-input--big" id="question-m" name="question" rows="5" placeholder="Ваш вопрос"></textarea>
+              </li>
+              <li class="form__button field">
+                <button class="field__submit btn btn--solid-2" type="submit" name="send-button-m">Отправить</button>
+              </li>
+              <li class="form__agreement field">
+                <input class="visually-hidden field__checkbox" type="checkbox" id="agreement-m" name="agreement" checked>
+                <label class="field__label field__label--checkbox" for="agreement-m">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
     </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">

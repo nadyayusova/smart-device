@@ -9,6 +9,7 @@
     .accordion__content {
       @include vp-769 {
         display: block;
+        padding-bottom: 16px;
         opacity: 1;
       }
     }
@@ -20,6 +21,20 @@
         position: absolute;
         width: 0;
         height: 0;
+      }
+    }
+  }
+
+  &:not(.accordion--opened) {
+    .accordion__content {
+      @include vp-769 {
+        margin-top: -4px;
+        // padding-bottom: 16px;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+        opacity: 0;
       }
     }
   }
@@ -35,18 +50,6 @@
 
   @include vp-769 {
     cursor: pointer;
-  }
-}
-
-.accordion__content {
-  @include vp-769 {
-    margin-top: -4px;
-    padding-bottom: 16px;
-
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-    opacity: 0;
   }
 }
 
@@ -85,6 +88,13 @@
       height: 1px;
       background-color: $color-alice-blue-lighter;
       transform: translate(-50%, -50%);
+    }
+
+    &--no-js {
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
 }

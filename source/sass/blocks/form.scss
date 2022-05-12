@@ -1,0 +1,46 @@
+.form__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "uname utel"
+    "qstn  qstn"
+    "sendq agree";
+  column-gap: 30px;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "uname"
+      "utel"
+      "qstn"
+      "sendq"
+      "agree";
+    column-gap: 0;
+    row-gap: 18px;
+  }
+}
+
+.form__name {
+  grid-area: uname;
+}
+
+.form__tel {
+  grid-area: utel;
+}
+
+.form__question {
+  grid-area: qstn;
+  grid-column: 1 / span 2;
+}
+
+.form__button {
+  grid-area: sendq;
+}
+
+.form__agreement {
+  grid-area: agree;
+}

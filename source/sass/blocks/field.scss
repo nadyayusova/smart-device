@@ -1,0 +1,139 @@
+.field__text-input {
+  width: 100%;
+  min-height: 50px;
+  padding: 13px;
+
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  background-color: transparentize($color-black-pearl, 0.85);
+  border-color: transparent;
+  border-radius: 3px;
+  outline-color: $color-default-white;
+
+  &::placeholder {
+    font-family: $ff-ptmono;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-transparent-white;
+  }
+
+  &--big {
+    resize: none;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    @include vp-1023 {
+      padding-top: 29px;
+      padding-bottom: 14px;
+    }
+
+    @include vp-769 {
+      padding-top: 22px;
+      padding-bottom: 46px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparentize($color-black-pearl, 0.75);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:invalid {
+    background-color: transparentize($color-error, 0.55);
+  }
+}
+
+.field__submit {
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  min-height: 46px;
+  margin-top: 6px;
+
+  @include vp-1023 {
+    width: 83%;
+    margin-top: 7px;
+  }
+
+  @include vp-769 {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+.field__checkbox {
+  &:focus + .field__label::before {
+    box-shadow: 0 0 0 2px $color-default-white;
+  }
+
+  &:disabled + .field__label::before {
+    opacity: 0.3;
+  }
+
+  &:checked + .field__label::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    width: 8px;
+    height: 6px;
+    border-radius: 1px;
+    border-left: 2px solid $color-default-white;
+    border-bottom: 2px solid $color-default-white;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+.field__label {
+  position: relative;
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: transparentize($color-default-white, 0.2);
+
+  &--checkbox {
+    display: flex;
+    align-items: center;
+
+    margin-top: 18px;
+    margin-left: 10px;
+
+    @include vp-1023 {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    @include vp-769 {
+      margin-top: -15px;
+      margin-left: 5px;
+    }
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      flex-grow: 0;
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-right: 12px;
+      box-shadow: 0 0 0 1px $color-default-white;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      box-shadow: 0 0 0 1px $color-transparent-white;
+    }
+  }
+}

@@ -6,7 +6,7 @@
   position: relative;
   max-width: 1300px;
 
-  padding: 100px 40px 40px 290px;
+  padding: 100px 40px 108px 290px;
   background-image: url("../img/digits-bg.jpg");
   background-position: 73px 109px;
   background-repeat: no-repeat;
@@ -19,12 +19,12 @@
   }
 
   @include vp-1023 {
-    padding: 55px 50px 40px 225px;
+    padding: 55px 50px 69px 225px;
     background-position: 77px 70px;
   }
 
   @include vp-769 {
-    padding: 28px 25px 20px;
+    padding: 28px 25px 67px;
     background-image: none;
   }
 
@@ -88,9 +88,13 @@
     font-size: 14px;
     line-height: 134.4%;
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
-.about__mobile-invisible {
+.about__mobile-invisible:not(.about__mobile-invisible--opened) {
   @include vp-769 {
     display: none;
   }
@@ -107,6 +111,10 @@
   }
 
   @include vp-769 {
-    padding: 10px 20px;
+    padding: 9px 40px;
+  }
+
+  &--hidden {
+    display: none;
   }
 }

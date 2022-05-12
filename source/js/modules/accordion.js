@@ -1,5 +1,6 @@
 const accordions = document.querySelectorAll(".accordion");
 const accordionHeaders = document.querySelectorAll('.accordion__header');
+const acccordionIcons = document.querySelectorAll('.accordion__icon');
 const breakpoint = window.matchMedia(`(max-width:769px)`);
 
 const breakpointChecker = () => {
@@ -40,6 +41,8 @@ const initAccordion = () => {
         openAccordion(accordion);
       }
     });
+
+    acccordionIcons.forEach(icon => icon.classList.remove('accordion__icon--no-js'));
   });
 
   breakpoint.addEventListener('change', breakpointChecker);

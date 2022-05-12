@@ -2,8 +2,14 @@
   position: relative;
   flex-basis: calc((100% - 2 * 6.9%) / 3);
   // flex-basis: 350px;
+
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+
   min-height: 650px;
   margin-bottom: 20px;
+
   background-color: $color-tangaroa;
   background-position: center;
   background-repeat: no-repeat;
@@ -94,8 +100,9 @@
 }
 
 .product__link {
-  display: block;
-  height: 100%;
+  // display: block;
+  // height: 100%;
+  width: 100%;
 
   &:hover,
   &:focus-within {

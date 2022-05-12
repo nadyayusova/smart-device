@@ -20,23 +20,27 @@
   &--solid-1 {
     background-color: $color-deep-sky-blue;
     border-color: $color-deep-sky-blue;
+    outline-color: $color-default-white;
   }
 
   &--solid-2 {
     color: $color-default-white;
     background-color: $color-black-pearl;
     border-color: $color-black-pearl;
+    outline-color: $color-default-white;
   }
 
   &--transparent-1 {
     background-color: $color-transparent;
     border-color: $color-alice-blue;
+    outline-color: $color-default-white;
   }
 
   &--transparent-2 {
     color: $color-deep-sky-blue;
     background-color: $color-transparent;
     border-color: $color-deep-sky-blue;
+    outline-color: $color-black-pearl;
   }
 
   &:disabled {

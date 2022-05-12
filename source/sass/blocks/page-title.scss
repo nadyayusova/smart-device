@@ -134,16 +134,18 @@
   }
 }
 
-.page-title__mobile {
-  display: none;
-
-  @include vp-769 {
-    display: block;
+.page-title__btn-text {
+  &--desktop {
+    @include vp-769 {
+      display: none;
+    }
   }
-}
 
-.page-title__desktop {
-  @include vp-769 {
+  &--mobile {
     display: none;
+
+    @include vp-769 {
+      display: block;
+    }
   }
 }

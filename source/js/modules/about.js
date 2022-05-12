@@ -1,23 +1,26 @@
-const mobileInvisibleText = document.querySelector('.about__mobile-invisible');
 const showMoreBtn = document.querySelector('.about__show-more');
-const hiddenText = document.querySelectorAll('.about__more-text');
+const textToCheck = document.querySelectorAll('.about__text--opened, .about__mobile-invisible--opened');
 
 const onButtonClick = function () {
-  if (mobileInvisibleText.classList.contains('about__mobile-invisible')) {
-    mobileInvisibleText.classList.remove('about__mobile-invisible');
-  }
-
-  hiddenText.forEach(text => {
-    if (text.classList.contains('visually-hidden')) {
-      text.classList.remove('visually-hidden');
+  textToCheck.forEach(text => {
+    if (text.classList.contains('about__text')) {
+      text.classList.toggle('about__text--opened');
+      text.classList.toggle('about__text--hidden');
+    } else if (text.classList.contains('about__mobile-invisible')) {
+      text.classList.toggle('about__mobile-invisible--opened');
+      text.classList.toggle('about__mobile-invisible--hidden');
     }
   });
 
-  showMoreBtn.style.display = 'none';
+  showMoreBtn.textContent = showMoreBtn.textContent === 'Подробнее' ? 'Свернуть' : 'Подробнее';
 };
 
 const initButton = () => {
+  if (showMoreBtn.classList.contains('about__show-more--hidden')) {
+    showMoreBtn.classList.remove('about__show-more--hidden');
+  }
   showMoreBtn.addEventListener('click', onButtonClick);
+  showMoreBtn.click();
 };
 
 export {initButton};
