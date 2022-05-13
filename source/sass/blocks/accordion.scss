@@ -29,7 +29,6 @@
     .accordion__content {
       @include vp-769 {
         margin-top: -4px;
-        // padding-bottom: 16px;
 
         max-height: 0;
         overflow: hidden;
@@ -64,8 +63,6 @@
     &::before {
       content: "";
       position: absolute;
-      // left: 7px;
-      // top: 5px;
       left: 50%;
       top: 50%;
       display: block;
@@ -80,8 +77,6 @@
     &::after {
       content: "";
       position: absolute;
-      // left: 7px;
-      // top: 5px;
       left: 50%;
       top: 50%;
       width: 15px;

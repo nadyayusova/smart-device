@@ -1,7 +1,6 @@
 .product {
   position: relative;
   flex-basis: calc((100% - 2 * 6.9%) / 3);
-  // flex-basis: 350px;
 
   display: flex;
   justify-content: stretch;
@@ -100,8 +99,6 @@
 }
 
 .product__link {
-  // display: block;
-  // height: 100%;
   width: 100%;
 
   &:hover,
@@ -149,11 +146,6 @@
   height: 60px;
   background: $color-deep-sky-blue;
   border-radius: 3px 0 0 0;
-
-  // @include vp-1023 {
-  //   width: 60px;
-  //   height: 60px;
-  // }
 
   @include vp-769 {
     width: 40px;

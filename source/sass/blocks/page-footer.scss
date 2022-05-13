@@ -4,8 +4,6 @@
 
 .page-footer__inner {
   display: grid;
-  // grid-template-columns: 324px 1fr 345px;
-  // grid-template-columns: 1fr 1.38fr 345px;
   grid-template-columns: 1fr 1.38fr 1.06fr;
   grid-template-rows: 55px max-content;
   column-gap: 50px;
