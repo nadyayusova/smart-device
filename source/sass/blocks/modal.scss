@@ -1,163 +1,129 @@
 .modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
+  width: 100%;
+  height: calc(100 * var(--vh, 1vh));
 
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  display: grid;
+  place-items: center;
 
   background-color: rgba($color-default-black, 0.8);
-  transform: scale(1.2);
-  visibility: hidden;
   opacity: 0;
-
-  transition: opacity $trans-modal,
-    transform $trans-modal,
-    visibility $trans-modal;
-
+  visibility: hidden;
   pointer-events: none;
+  overflow-y: auto;
+  transition: opacity 0.3s ease 0s;
+  transform: translateY(100%);
+  cursor: pointer;
+}
 
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.modal.show {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: all;
+}
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.modal__content {
+  position: relative;
 
-  &__wrapper {
-    position: relative;
+  width: 500px;
+  min-height: 610px;
+  padding: 40px;
 
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
+  background-color: $color-deep-sky-blue;
+  cursor: auto;
+
+  @include vp-769 {
     width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-769 {
-      padding: 60px 16px;
-    }
+    padding: 20px;
   }
+}
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.modal .modal__close-btn {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  display: block;
+  z-index: 1;
 
-    width: 100%;
-    height: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
 
-    cursor: pointer;
+  background: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    fill: $color-default-white;
   }
+}
 
-  &__content {
-    position: relative;
+.modal__offer {
+  margin: 0;
+  margin-top: -2px;
+  margin-bottom: 2px;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 140.62%;
+  color: $color-default-white;
+}
 
-    width: 500px;
-    padding: 40px;
+.modal__service {
+  width: 90%;
+  margin: 0;
+  margin-bottom: 38px;
+  font-family: $ff-ptmono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+}
 
-    background-color: $color-deep-sky-blue;
+.modal form {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-    @include vp-769 {
-      width: 100%;
-      padding: 20px;
-    }
-  }
+.modal fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "uname"
+    "utel"
+    "qstn"
+    "sendq"
+    "agree";
+  row-gap: 18px;
+}
 
-  &__close-btn {
-    position: absolute;
-    top: 16px;
-    right: 4px;
-    z-index: 1;
+.modal .form__user-name {
+  grid-area: uname;
+}
 
-    width: 40px;
-    height: 40px;
-    padding: 0;
+.modal .form__tel {
+  grid-area: utel;
+}
 
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
+.modal .form__question {
+  grid-area: qstn;
+}
 
-    svg {
-      fill: $color-default-white;
-    }
-  }
+.modal .form__button {
+  grid-area: sendq;
+}
 
-  &__title {
-    margin: 0;
-    margin-top: -2px;
-    margin-bottom: 2px;
-    font-family: $ff-roboto;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 140.62%;
-    color: $color-default-white;
-  }
+.modal .form__agreement {
+  grid-area: agree;
+  margin: -17px 0 6px;
+}
 
-  &__description {
-    width: 90%;
-    margin: 0;
-    margin-bottom: 37px;
-    font-family: $ff-ptmono;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: $color-default-white;
-  }
-
-  &__form {
-    .form__content {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .field__submit {
-      width: 100%;
-      margin: 0;
-      margin-top: -5px;
-    }
-
-    .form__agreement {
-      margin: -20px 0 5px;
-    }
-  }
-
-  &--responsive {
-    .modal__content {
-      width: 100%;
-    }
-  }
-
-  &--fit-content {
-    .modal__content {
-      width: auto;
-
-      @include vp-769 {
-        width: 100%;
-      }
-    }
-  }
-
-  &--no-scale {
-    transform: none;
-  }
-
-  &--preload {
-    transition: none;
-  }
-
-  &.is-active {
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
-
-    pointer-events: auto;
-  }
+.modal form button {
+  width: 100%;
+  margin: 0;
 }

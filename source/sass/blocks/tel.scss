@@ -1,18 +1,15 @@
 .tel {
   flex-shrink: 0;
-  padding-bottom: 10px;
-  user-select: none;
-
-  @include vp-1023 {
-    padding-bottom: 0;
-  }
-}
-
-.tel__link {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
   transition: opacity $trans-default;
+  user-select: none;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
 
   &:hover {
     opacity: $hover-opacity;

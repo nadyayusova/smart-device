@@ -60,7 +60,7 @@
   }
 }
 
-.about__caption {
+.about h2 {
   margin: 0;
   margin-bottom: 12px;
   font-family: $ff-roboto;
@@ -75,7 +75,7 @@
   }
 }
 
-.about__text {
+.about p {
   margin: 0;
   margin-bottom: 20px;
   font-family: $ff-ptmono;
@@ -88,13 +88,9 @@
     font-size: 14px;
     line-height: 134.4%;
   }
-
-  &--hidden {
-    display: none;
-  }
 }
 
-.about__mobile-invisible:not(.about__mobile-invisible--opened) {
+.about__mobile-invisible.about__mobile-invisible--hidden {
   @include vp-769 {
     display: none;
   }
@@ -112,9 +108,5 @@
 
   @include vp-769 {
     padding: 9px 40px;
-  }
-
-  &--hidden {
-    display: none;
   }
 }

@@ -17,14 +17,6 @@
   }
 }
 
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -49,6 +41,9 @@
 }
 
 .scroll-lock {
+  position: fixed;
+  right: 0;
+  left: 0;
   overflow: hidden;
 }
 
@@ -64,4 +59,8 @@
 .no-transition {
   /* stylelint-disable-next-line */
   transition: none !important;
+}
+
+.hidden {
+  display: none;
 }

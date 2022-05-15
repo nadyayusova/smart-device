@@ -23,7 +23,7 @@
 
 .feedback-form__inner {
   max-width: 1300px;
-  padding: 165px 40px 236px;
+  padding: 165px 40px 237px;
   background-image: url("../img/paper-airplane.png");
   background-position: top 246px left 40px;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 
   @include vp-1023 {
     background-image: none;
-    padding: 45px 50px 114px;
+    padding: 45px 50px 115px;
 
     @include retina {
       background-image: none;
@@ -45,61 +45,6 @@
   }
 
   @include vp-769 {
-    padding: 47px 25px 88px;
-  }
-}
-
-.feedback-form__offer {
-  margin: 0 0 11px 50%;
-  padding-left: 14px;
-
-  font-family: $ff-roboto;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  color: $color-default-white;
-
-  @include vp-1023 {
-    margin: 0 0 7px;
-    padding: 0;
-  }
-
-  @include vp-769 {
-    font-size: 30px;
-    line-height: 140.62%;
-  }
-}
-
-.feedback-form__service {
-  margin: 0 0 36px 50%;
-  padding-left: 20px;
-
-  font-family: $ff-ptmono;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: $color-default-white;
-
-  @include vp-1023 {
-    margin: 0 0 23px;
-    padding: 0;
-  }
-
-  @include vp-769 {
-    margin-bottom: 34px;
-    font-size: 14px;
-    line-height: 134.4%;
-  }
-}
-
-.feedback-form__form {
-  width: 49%;
-  margin-left: 50%;
-  padding-left: 20px;
-
-  @include vp-1023 {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 48px 25px 89px;
   }
 }

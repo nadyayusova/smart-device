@@ -20,16 +20,16 @@
       justify-content: center;
       margin-left: -4px;
     }
-
-    .logo__image {
-      width: 55px;
-      height: 55px;
-    }
-
-    .logo__text {
-      display: block;
-    }
   }
+}
+
+.logo--footer .logo__image {
+  width: 55px;
+  height: 55px;
+}
+
+.logo--footer .logo__text {
+  display: block;
 }
 
 .logo__image {

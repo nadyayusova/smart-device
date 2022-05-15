@@ -13,6 +13,12 @@
 
   @include vp-769 {
     justify-content: center;
-    padding: 16px 0 22px 4px;
+    padding: 16px 0 29px 4px;
   }
+}
+
+.socials__link {
+  display: block;
+  width: 30px;
+  height: 30px;
 }

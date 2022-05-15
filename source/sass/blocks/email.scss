@@ -1,18 +1,15 @@
 .email {
   flex-shrink: 0;
-  padding-bottom: 11px;
-  user-select: none;
-
-  @include vp-1023 {
-    padding-bottom: 0;
-  }
-}
-
-.email__link {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 11px;
   transition: opacity $trans-default;
+  user-select: none;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
 
   &:hover {
     opacity: $hover-opacity;

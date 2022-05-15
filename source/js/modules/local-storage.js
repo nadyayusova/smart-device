@@ -1,15 +1,15 @@
-const form = document.querySelector('.feedback-form .form');
-const formModal = document.querySelector('.modal .form');
+const formFeedback = document.querySelector('.feedback-form form');
+const formModal = document.querySelector('.modal form');
 
 const onFormSubmit = function (evt) {
   evt.preventDefault();
   const form = evt.target;
 
-  if(form.elements['user-name'].validity.valid) {
+  if (form.elements['user-name'].validity.valid) {
     localStorage.setItem('user-name', form.elements['user-name'].value);
   }
 
-  if(form.elements['phone-no'].validity.valid) {
+  if (form.elements['phone-no'].validity.valid) {
     localStorage.setItem('phone-no', form.elements['phone-no'].value);
   }
 };
@@ -28,9 +28,9 @@ function getFormValues(form) {
 }
 
 function initForm() {
-  getFormValues(form);
+  getFormValues(formFeedback);
   getFormValues(formModal);
-  form.addEventListener('submit', onFormSubmit);
+  formFeedback.addEventListener('submit', onFormSubmit);
   formModal.addEventListener('submit', onFormSubmit);
 }
 
