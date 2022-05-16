@@ -1706,6 +1706,7 @@ button,
   margin: 0;
   margin-top: -2px;
   margin-bottom: 2px;
+  padding: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 30px;
@@ -1717,6 +1718,7 @@ button,
   width: 90%;
   margin: 0;
   margin-bottom: 38px;
+  padding: 0;
   font-family: "PT Mono", "Monaco", monospace;
   font-weight: 400;
   font-size: 16px;
