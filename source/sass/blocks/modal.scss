@@ -62,7 +62,7 @@
   }
 }
 
-.modal__offer {
+.modal p:first-of-type {
   margin: 0;
   margin-top: -2px;
   margin-bottom: 2px;
@@ -73,7 +73,7 @@
   color: $color-default-white;
 }
 
-.modal__service {
+.modal p:last-of-type {
   width: 90%;
   margin: 0;
   margin-bottom: 38px;
@@ -123,7 +123,7 @@
   margin: -17px 0 6px;
 }
 
-.modal form button {
+.modal button[type="submit"] {
   width: 100%;
   margin: 0;
 }

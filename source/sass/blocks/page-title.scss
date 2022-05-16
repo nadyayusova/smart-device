@@ -60,7 +60,7 @@
   }
 }
 
-.page-title__caption {
+.page-title h2 {
   max-width: 800px;
   margin: 0;
   margin-bottom: 31px;
@@ -89,7 +89,7 @@
   }
 }
 
-.page-title__description {
+.page-title p {
   max-width: 650px;
   margin: 0;
   margin-bottom: 36px;
@@ -116,7 +116,7 @@
   }
 }
 
-.page-title__get-advice-link {
+.page-title a {
   font-size: 18px;
   line-height: 21px;
   padding: 15px 26px;
@@ -134,14 +134,14 @@
   }
 }
 
-.page-title__btn-text {
-  &--desktop {
+.page-title span {
+  &:first-child {
     @include vp-769 {
       display: none;
     }
   }
 
-  &--mobile {
+  &:last-child {
     display: none;
 
     @include vp-769 {
