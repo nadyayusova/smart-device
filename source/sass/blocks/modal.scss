@@ -14,8 +14,8 @@
   pointer-events: none;
   overflow-y: auto;
   transition: opacity 0.3s ease 0s;
-  transform: translateY(100%);
   cursor: pointer;
+  z-index: -1;
 }
 
 .modal.show {

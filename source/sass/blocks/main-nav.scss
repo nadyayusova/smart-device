@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 
   max-width: 1300px;
@@ -33,11 +33,11 @@
 }
 
 .main-nav__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: start;
+  column-gap: 39px;
 
   max-width: 461px;
   min-width: 40%;
@@ -57,7 +57,7 @@
 
 .main-nav__order-call-link {
   flex-shrink: 0;
-  margin-top: 0;
+  margin-top: 16px;
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 16px;

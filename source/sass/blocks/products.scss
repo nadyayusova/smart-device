@@ -7,11 +7,11 @@
   padding: 20px 40px 121px;
 
   @include vp-1023 {
-    padding: 20px 50px 75px;
+    padding: 20px 50px 45px;
   }
 
   @include vp-769 {
-    padding: 10px 25px 85px;
+    padding: 10px 25px 55px;
   }
 }
 
@@ -53,7 +53,8 @@
 .products__inner ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0 6.9%;
 
   margin: 0;
   padding: 0;
@@ -61,7 +62,6 @@
 
   @include vp-1023 {
     flex-direction: column;
-    gap: 30px;
   }
 }
 
@@ -83,7 +83,7 @@
 
   @include vp-1023 {
     min-height: 250px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 
   &:nth-child(3n+1) {

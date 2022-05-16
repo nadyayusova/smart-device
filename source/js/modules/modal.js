@@ -4,6 +4,7 @@ const modalOpen = document.querySelector('.main-nav__order-call-link');
 const modal = document.querySelector('.modal');
 const modalClose = modal.querySelector('.modal__close-btn');
 const af = document.querySelector('.modal input[autofocus]');
+const form = document.querySelector('.modal form');
 let html = document.documentElement;
 let scrollPosition;
 let modalFocus = new FocusLock();
@@ -25,10 +26,17 @@ const onModalCloseClick = function () {
   closeModal();
 };
 
+const onFormSubmit = function () {
+  if (form.elements['user-name'].validity.valid || form.elements['phone-no'].validity.valid) {
+    closeModal();
+  }
+};
+
 const openModal = function () {
   modal.addEventListener('mousedown', onModalMouseDown);
   document.addEventListener('keydown', onModalEscPress);
   modalClose.addEventListener('click', onModalCloseClick);
+  form.addEventListener('submit', onFormSubmit);
 
   modal.classList.add('show');
   modal.setAttribute('aria-hidden', false);
@@ -44,6 +52,7 @@ const closeModal = function () {
   modal.removeEventListener('mousedown', onModalMouseDown);
   document.removeEventListener('keydown', onModalEscPress);
   modalClose.removeEventListener('click', onModalCloseClick);
+  form.removeEventListener('submit', onFormSubmit);
 
   modal.classList.remove('show');
   modal.setAttribute('aria-hidden', true);

@@ -2,8 +2,10 @@ const formFeedback = document.querySelector('.feedback-form form');
 const formModal = document.querySelector('.modal form');
 
 const onFormSubmit = function (evt) {
-  evt.preventDefault();
   const form = evt.target;
+
+  form.elements['user-name'].required = true;
+  form.elements['phone-no'].required = true;
 
   if (form.elements['user-name'].validity.valid) {
     localStorage.setItem('user-name', form.elements['user-name'].value);
@@ -11,6 +13,10 @@ const onFormSubmit = function (evt) {
 
   if (form.elements['phone-no'].validity.valid) {
     localStorage.setItem('phone-no', form.elements['phone-no'].value);
+  }
+
+  if (!form.elements['user-name'].validity.valid || !form.elements['phone-no'].validity.valid) {
+    evt.preventDefault();
   }
 };
 
