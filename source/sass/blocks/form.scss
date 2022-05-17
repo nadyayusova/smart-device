@@ -99,6 +99,7 @@
 
 .form__agreement {
   grid-area: agree;
+  position: relative;
 }
 
 .form input[type="text"],
@@ -177,6 +178,11 @@
     margin-top: 5px;
     margin-bottom: 20px;
   }
+}
+
+.form input[type="checkbox"] {
+  bottom: 0;
+  left: 20px;
 }
 
 .form input[type="checkbox"] + label {

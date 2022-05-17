@@ -1288,6 +1288,7 @@ button,
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: agree;
+  position: relative;
 }
 
 .modal fieldset > .form__agreement {
@@ -1429,6 +1430,11 @@ button,
   width: 97%;
   min-height: 46px;
   margin-top: 6px;
+}
+
+.form input[type="checkbox"] {
+  bottom: 0;
+  left: 20px;
 }
 
 .form input[type="checkbox"] + label {
